@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class waterBottles {
+    public static void main(String[] args) {
+     Scanner in=new Scanner(System.in);
+     System.out.print("enter no. of filled water bottles:");
+     int numBottles=in.nextInt();
+     System.out.print("enter the exchangable empty water bottles:");
+     int numExchange=in.nextInt();
+     int ans=numBottles;
+     while(numBottles>=numExchange){
+        int div=numBottles/numExchange;
+        int rem=numBottles%numExchange;
+        ans=ans+div;
+        numBottles=div+rem;
+     } 
+     System.out.println("no. of water bottles a person can drink is:"+ans);  
+    }
+    
+}
